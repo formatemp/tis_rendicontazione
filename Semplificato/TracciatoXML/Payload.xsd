@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="istanza" maxOccurs="unbounded" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="identificativoPratica" minOccurs="1" />
+	      <xs:element type="xs:string" name="denominazioneAPL" minOccurs="1" />
+              <xs:element type="xs:string" name="ragioneSocialeUtilizzatore" minOccurs="1" />
+              <xs:element type="xs:string" name="partitaIvaUtilizzatore" minOccurs="1" />
+              <xs:element type="xs:string" name="matricolaInpsUtilizzatore" minOccurs="1" />
+              <xs:element type="xs:string" name="codiceAtecoUtilizzatore" minOccurs="1" />
+              <xs:element type="xs:string" name="sedeUnitaProduttiva" minOccurs="1" />
+              <xs:element name="mensilitaAggiuntive" minOccurs="1" >
+              <xs:simpleType>
+			    <xs:restriction base="xs:integer">
+			      <xs:minInclusive value="0"/>
+			      <xs:maxInclusive value="2"/>
+			    </xs:restriction>
+			  </xs:simpleType>
+			</xs:element>
+              <xs:element  name="settoreRiferimento" minOccurs="1" >
+			   <xs:simpleType>
+  				  <xs:restriction base="xs:string">
+  				    <xs:pattern value="ED|NE"/>
+  				  </xs:restriction>
+  				</xs:simpleType>
+			  </xs:element>			  
+              <xs:element name="autocertificazioneSettimane" minOccurs="1" >
+              <xs:simpleType>
+  				  <xs:restriction base="xs:string">
+  				    <xs:pattern value="S|N"/>
+  				  </xs:restriction>
+  				</xs:simpleType>
+              </xs:element>
+              <xs:element type="xs:string" name="note" minOccurs="0" />
+              <xs:element name="lavoratori">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="lavoratore" maxOccurs="unbounded" minOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:short" name="annoRiferimento"  minOccurs="1"/>
+                          <xs:element type="xs:short" name="meseRiferimento" minOccurs="1"/>
+                          <xs:element type="CodiceFiscalePersona" name="codiceFiscale" minOccurs="1"/>
+                          <xs:element type="xs:string" name="cognome" minOccurs="1"/>
+                          <xs:element type="xs:string" name="nome" minOccurs="1"/>
+                          <xs:element type="xs:string" name="tipologiaContratto" minOccurs="1"/>
+                          <xs:element type="xs:string" name="sgraviAliquotaContributivaPrevidenziale" minOccurs="1"/>
+                          <xs:element type="xs:float" name="retribuzioneMensileLorda" minOccurs="1"/>
+                          <xs:element type="xs:float" name="retribuzioneTisRiconosciuta" minOccurs="1"/>
+                          <xs:element type="xs:float" name="contribuzioneTisRiconosciuta" minOccurs="1"/>
+                          <xs:element type="xs:float" name="quotaRateiMensilitaAggiuntive" minOccurs="1"/>
+                          <xs:element type="xs:float" name="quotaRateiRolPermessiFerie" minOccurs="1"/>
+                          <xs:element type="xs:float" name="totaleOreTisRiconosciute" minOccurs="1"/>
+                          <xs:element type="xs:string" name="lavoratoreAlleDipendenze25Marzo" minOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+	
+
+  </xs:element>
+  	<xs:simpleType name="CodiceFiscalePersona">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{6}[0-9A-Z][0-9LMNPQRSTUV][ABCDEHLMPRST][0-9LMNPQRSTUV]{2}[A-Z][0-9LMNPQRSTUV]{3}[A-Z]"  />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,50 @@
+<tis>
+	<istanza>
+		<identificativoPratica>1234</identificativoPratica>
+		<denominazioneAPL>APL DI ESEMPIO</denominazioneAPL>
+		<ragioneSocialeUtilizzatore>ACME Company srl</ragioneSocialeUtilizzatore>
+		<partitaIvaUtilizzatore>12345678901</partitaIvaUtilizzatore>
+		<matricolaInpsUtilizzatore>9876543210</matricolaInpsUtilizzatore>
+		<codiceAtecoUtilizzatore>46.03.01</codiceAtecoUtilizzatore>
+		<sedeUnitaProduttiva>H501</sedeUnitaProduttiva>
+		<mensilitaAggiuntive>1</mensilitaAggiuntive>
+		<settoreRiferimento>NE</settoreRiferimento>
+		<autocertificazioneSettimane>S</autocertificazioneSettimane>
+		<note></note>
+		<lavoratori>
+			<lavoratore>
+				<annoRiferimento>2020</annoRiferimento>
+				<meseRiferimento>03</meseRiferimento>
+				<codiceFiscale>RSSMRA70H50H501M</codiceFiscale>
+				<cognome>Rossi</cognome>
+				<nome>Mario</nome>
+				<tipologiaContratto>TD</tipologiaContratto>
+				<sgraviAliquotaContributivaPrevidenziale>N</sgraviAliquotaContributivaPrevidenziale>
+				<retribuzioneMensileLorda>1792.00</retribuzioneMensileLorda>
+				<retribuzioneTisRiconosciuta>504.00</retribuzioneTisRiconosciuta>
+				<contribuzioneTisRiconosciuta>225.59</contribuzioneTisRiconosciuta>
+				<quotaRateiMensilitaAggiuntive>51.60</quotaRateiMensilitaAggiuntive>
+				<quotaRateiRolPermessiFerie>78.00</quotaRateiRolPermessiFerie>
+				<totaleOreTisRiconosciute>60</totaleOreTisRiconosciute>
+				<lavoratoreAlleDipendenze25Marzo>S</lavoratoreAlleDipendenze25Marzo>
+			</lavoratore>
+			<lavoratore>
+				<annoRiferimento>2020</annoRiferimento>
+				<meseRiferimento>04</meseRiferimento>
+				<codiceFiscale>RSSMRA70H50H501M</codiceFiscale>
+				<cognome>Rossi</cognome>
+				<nome>Mario</nome>
+				<tipologiaContratto>TD</tipologiaContratto>
+				<sgraviAliquotaContributivaPrevidenziale>N</sgraviAliquotaContributivaPrevidenziale>
+				<retribuzioneMensileLorda>1792.00</retribuzioneMensileLorda>
+				<retribuzioneTisRiconosciuta>504.00</retribuzioneTisRiconosciuta>
+				<contribuzioneTisRiconosciuta>225.59</contribuzioneTisRiconosciuta>
+				<quotaRateiMensilitaAggiuntive>51.60</quotaRateiMensilitaAggiuntive>
+				<quotaRateiRolPermessiFerie>78.00</quotaRateiRolPermessiFerie>
+				<totaleOreTisRiconosciute>60</totaleOreTisRiconosciute>
+				<lavoratoreAlleDipendenze25Marzo>S</lavoratoreAlleDipendenze25Marzo>
+			</lavoratore>
+		</lavoratori>
+	</istanza>
+</tis>
+
