@@ -11,7 +11,7 @@
               <xs:element name="partitaIvaUtilizzatore" minOccurs="1">
 			  <xs:simpleType>
 				<xs:restriction base="xs:string">
-				  <xs:length value="11"/>
+				  <xs:maxLength value="11"/>
 				</xs:restriction>
 			  </xs:simpleType>
 			</xs:element>
