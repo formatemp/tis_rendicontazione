@@ -2,7 +2,7 @@
   <xs:element name="tis" >
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="istanza">
+        <xs:element name="istanza" maxOccurs="unbounded" minOccurs="1">
           <xs:complexType>
             <xs:sequence>
               <xs:element type="xs:string" name="identificativoPratica"  minOccurs="1"/>
