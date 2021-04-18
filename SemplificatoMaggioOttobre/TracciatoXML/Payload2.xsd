@@ -1,0 +1,201 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"  >
+  <xs:element name="tis" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="istanza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="identificativoPratica"  minOccurs="1"/>
+              <xs:element type="xs:string" name="denominazioneAPL"  minOccurs="1"/>
+              <xs:element type="xs:string" name="ragioneSocialeUtilizzatore" minOccurs="1"/>
+              <xs:element name="partitaIvaUtilizzatore" minOccurs="1">
+			  <xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:length value="11"/>
+				</xs:restriction>
+			  </xs:simpleType>
+			</xs:element>
+              <xs:element type="xs:long" name="matricolaInpsUtilizzatore"  minOccurs="1"/>
+              <xs:element type="xs:string" name="codiceAtecoUtilizzatore"  minOccurs="1"/>
+              <xs:element  name="sedeUnitaProduttiva" minOccurs="1">
+			  <xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:length value="4"/>
+				</xs:restriction>
+			  </xs:simpleType>
+			</xs:element>
+              <xs:element  name="mensilitaAggiuntive" minOccurs="1">
+			    <xs:simpleType>
+				<xs:restriction base="xs:integer">
+					  <xs:minInclusive value="0"/>
+					  <xs:maxInclusive value="5"/>
+					
+				</xs:restriction>
+			  </xs:simpleType>
+			  </xs:element>
+              <xs:element  name="settoreRiferimento" minOccurs="1">
+			    <xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:enumeration value="ED"/>
+				  <xs:enumeration value="NE"/>
+				</xs:restriction>
+			  </xs:simpleType>
+			  </xs:element>
+              <xs:element  name="autocertificazioneSettimane" minOccurs="1">
+			  <xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:enumeration value="S"/>
+				  <xs:enumeration value="N"/>
+				</xs:restriction>
+			  </xs:simpleType>
+			  </xs:element>
+              <xs:element type="xs:string" name="note"/>
+              <xs:element name="sedeLegaleUtilizzatore" >
+			  <xs:simpleType>
+				<xs:restriction base="xs:string">
+				  <xs:length value="4"/>
+				</xs:restriction>
+			  </xs:simpleType>
+			</xs:element>
+              <xs:element name="giornateFruite">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="periodo" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:integer" name="totale" />
+                          <xs:element  name="anno">
+						   <xs:simpleType>
+								<xs:restriction base="xs:integer">
+									  <xs:minInclusive value="2020"/>
+									  <xs:maxInclusive value="2021"/>
+								</xs:restriction>
+							  </xs:simpleType>
+							  </xs:element>
+                          <xs:element name="mese">
+						   <xs:simpleType>
+								<xs:restriction base="xs:string" >
+								<xs:pattern value="[0-9]{2}" />
+								<xs:maxLength value="2" />
+								</xs:restriction>
+							  </xs:simpleType>
+							  </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="autorizzazione" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:date" name="data" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="distribuzioneOrarioAziendale">
+						   <xs:simpleType>
+								<xs:restriction base="xs:integer">
+									  <xs:minInclusive value="5"/>
+									  <xs:maxInclusive value="7"/>
+								</xs:restriction>
+							  </xs:simpleType>
+							  </xs:element>
+              <xs:element name="lavoratori">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="lavoratore" maxOccurs="unbounded" minOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element  name="annoRiferimento"  minOccurs="1">
+						   <xs:simpleType>
+								<xs:restriction base="xs:integer" >
+									  <xs:minInclusive value="2020"/>
+									  <xs:maxInclusive value="2021"/>
+								</xs:restriction>
+							  </xs:simpleType>
+							  </xs:element>
+                          <xs:element  name="meseRiferimento"  minOccurs="1">
+						   <xs:simpleType>
+								<xs:restriction base="xs:string" >
+								<xs:pattern value="[0-9]{2}" />
+								<xs:maxLength value="2" />
+								</xs:restriction>
+							  </xs:simpleType>
+							  </xs:element>
+                          <xs:element name="codiceFiscale"  minOccurs="1">
+							  <xs:simpleType>
+								<xs:restriction base="xs:string">
+								  <xs:length value="16"/>
+								</xs:restriction>
+							  </xs:simpleType>
+							</xs:element>
+                          <xs:element type="xs:string" name="cognome" minOccurs="1" />
+                          <xs:element type="xs:string" name="nome" minOccurs="1" />
+                          <xs:element  name="tipologiaContratto"  minOccurs="1">
+						   <xs:simpleType>
+						   <xs:restriction base="xs:string">
+							  <xs:enumeration value="TD"/>
+							  <xs:enumeration value="TI"/>
+							  <xs:enumeration value="AP"/>
+							</xs:restriction>
+						  </xs:simpleType>
+						  </xs:element>
+                          <xs:element name="sgraviAliquotaContributivaPrevidenziale"  minOccurs="1">
+						   <xs:simpleType>
+						   <xs:restriction base="xs:string">
+							  <xs:enumeration value="S"/>
+							  <xs:enumeration value="N"/>
+							</xs:restriction>
+						  </xs:simpleType>
+						  </xs:element>
+                          <xs:element type="xs:float" name="retribuzioneMensileLorda"  minOccurs="1"/>
+                          <xs:element type="xs:float" name="retribuzioneTisRiconosciuta"  minOccurs="1"/>
+                          <xs:element type="xs:float" name="contribuzioneTisRiconosciuta" minOccurs="1"/>
+                          <xs:element type="xs:float" name="quotaRateiMensilitaAggiuntive"  minOccurs="1"/>
+                          <xs:element type="xs:float" name="quotaRateiRolPermessiFerie"  minOccurs="1"/>
+                          <xs:element type="xs:float" name="totaleOreTisRiconosciute"  minOccurs="1"/>
+                          <xs:element name="lavoratoreAlleDipendenze25Marzo" minOccurs="1">
+						   <xs:simpleType>
+						   <xs:restriction base="xs:string">
+							  <xs:enumeration value="S"/>
+							  <xs:enumeration value="N"/>
+							</xs:restriction>
+						  </xs:simpleType>
+						  </xs:element>
+                          <xs:element type="xs:float" name="retribuzioneOrariaLordaDiFatto" minOccurs="1"/>
+                          <xs:element  name="lavoratoreAlleDipendenze12Luglio">
+						   <xs:simpleType>
+						   <xs:restriction base="xs:string">
+							  <xs:enumeration value="S"/>
+							  <xs:enumeration value="N"/>
+							  <xs:enumeration value="Z"/>
+							</xs:restriction>
+						  </xs:simpleType>
+						  </xs:element>
+                          <xs:element  name="lavoratoreAlleDipendenze9Novembre" minOccurs="1">
+						   <xs:simpleType>
+						   <xs:restriction base="xs:string">
+							  <xs:enumeration value="S"/>
+							  <xs:enumeration value="N"/>
+							  <xs:enumeration value="Z"/>
+							</xs:restriction>
+						  </xs:simpleType>
+						  </xs:element>
+                          <xs:element type="xs:float" name="quotaRateiMensilitaAggiuntiveRetribuzione" minOccurs="1"/>
+                          <xs:element type="xs:float" name="quotaRateiMensilitaAggiuntiveContribuzione" minOccurs="1"/>
+                          <xs:element type="xs:float" name="quotaRateiRolPermessiFerieRetribuzione" minOccurs="1" />
+                          <xs:element type="xs:float" name="quotaRateiRolPermessiFerieContribuzione" minOccurs="1" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
