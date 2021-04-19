@@ -1,11 +1,11 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"  >
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  >
   <xs:element name="tis" >
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="istanza" maxOccurs="unbounded" minOccurs="1">
+        <xs:element name="istanza" minOccurs="1" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element type="xs:string" name="identificativoPratica"  minOccurs="1"/>
+              <xs:element type="xs:string" name="identificativoPratica"  minOccurs="1" />
               <xs:element type="xs:string" name="denominazioneAPL"  minOccurs="1"/>
               <xs:element type="xs:string" name="ragioneSocialeUtilizzatore" minOccurs="1"/>
               <xs:element name="partitaIvaUtilizzatore" minOccurs="1">
@@ -57,7 +57,7 @@
 				</xs:restriction>
 			  </xs:simpleType>
 			</xs:element>
-              <xs:element name="giornateFruite">
+              <xs:element name="giornateFruite" maxOccurs="unbounded" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="periodo" maxOccurs="unbounded" minOccurs="0">
@@ -188,14 +188,21 @@
                           <xs:element type="xs:float" name="quotaRateiRolPermessiFerieContribuzione" minOccurs="1" />
                         </xs:sequence>
                       </xs:complexType>
+                      
                     </xs:element>
                   </xs:sequence>
                 </xs:complexType>
+                
               </xs:element>
             </xs:sequence>
           </xs:complexType>
+       
         </xs:element>
       </xs:sequence>
     </xs:complexType>
+     <xs:unique name="uniqueIdentificativo">
+      <xs:selector xpath="istanza"/>
+      <xs:field xpath="identificativoPratica"/>
+    </xs:unique>
   </xs:element>
 </xs:schema>
