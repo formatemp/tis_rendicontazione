@@ -1,4 +1,4 @@
-<tis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PayloadXSD.xsd">   
+<tis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSD_TIS_DEROGA_2020.xsd">   
 	<istanza>  
 		<identificativoPratica>1234</identificativoPratica> 
 		<denominazioneAPL>APL DI ESEMPIO</denominazioneAPL>
