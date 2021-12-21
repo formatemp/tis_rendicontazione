@@ -212,7 +212,6 @@
 														</xs:simpleType>
 													</xs:element>
 													<xs:element type="dueCifreDecimali" name="percentualeSgraviAliquotaContributivaPrevidenziale" minOccurs="1" />
-													<!-- Aggiungere controllo permettere importi inferiori solo a 10.000 -->
 													<xs:element type="dueCifreDecimali" name="retribuzioneTisRiconosciuta" minOccurs="1" />
 													<xs:element type="dueCifreDecimali" name="contribuzioneTisRiconosciuta" minOccurs="1" />
 													<xs:element type="dueCifreDecimali" name="quotaRateiMensilitaAggiuntiveRetribuzione" minOccurs="1" />
