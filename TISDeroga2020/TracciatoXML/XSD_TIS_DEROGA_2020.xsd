@@ -289,7 +289,7 @@
 		<xs:union memberTypes="periodoPermessoDate">
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
-					<xs:enumeration value=""/>
+					<xs:length value="0"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:union>
