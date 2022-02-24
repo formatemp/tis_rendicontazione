@@ -286,16 +286,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="dataRichiestaIncontroInvioInformativaType">
-		<xs:union memberTypes="periodoPermessoDate">
-			<xs:simpleType>
-				<xs:restriction base="xs:string">
-					<xs:enumeration value=""/>
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:union>
-	</xs:simpleType>
-	<xs:simpleType name="periodoPermessoDate">
-				<xs:union>
+		<xs:union >
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
 					<xs:enumeration value=""/>
@@ -309,4 +300,5 @@
 			</xs:simpleType>
 		</xs:union>
 	</xs:simpleType>
+	
 </xs:schema>
