@@ -139,7 +139,7 @@
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:element>
-							<xs:element name="dataRichiestaIncontroInvioInformativa" type="dataRichiestaIncontroInvioInformativaType" nillable="true" >
+							<xs:element name="dataRichiestaIncontroInvioInformativa" type="dataRichiestaIncontroInvioInformativaType" minOccurs="0" >
 								
 							</xs:element>    
 							<xs:element name="esitoIncontro" minOccurs="1">
