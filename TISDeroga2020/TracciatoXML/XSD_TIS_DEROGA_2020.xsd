@@ -297,7 +297,7 @@
 	<xs:simpleType name="periodoPermessoDate">
 			<xs:restriction base="xs:date">
 				<xs:minInclusive value="2020-02-23"/>
-				<xs:maxInclusive value="2020-12-31"/>
+				<xs:maxInclusive value="2021-01-31"/>
 			</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
