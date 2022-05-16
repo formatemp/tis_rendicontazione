@@ -1,4 +1,4 @@
-<tis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/formatemp/tis_rendicontazione/main/Semplificato2021/TracciatoXML/Payload2.xsd">   
+<tis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/formatemp/tis_rendicontazione/main/Semplificato2021/TracciatoXML/XSD_TIS_SEMPLIFICATO_2021.xsd">   
  	<istanza>  
 		<identificativoPratica>1234</identificativoPratica> 
 		<denominazioneAPL>APL DI ESEMPIO</denominazioneAPL>
