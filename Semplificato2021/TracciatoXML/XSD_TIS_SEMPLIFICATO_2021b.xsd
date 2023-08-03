@@ -212,7 +212,7 @@
 													<xs:element type="dueCifreDecimali" name="quotaRateiRolPermessiFerieRetribuzione" minOccurs="1" />
 													<xs:element type="dueCifreDecimali" name="quotaRateiRolPermessiFerieContribuzione" minOccurs="1" />
 													<xs:element type="dueCifreDecimali" name="totaleOreTisRiconosciute" minOccurs="1" />
-													<xs:element name="lavoratoreAlleDipendenze9novembre2020" minOccurs="1">
+													<xs:element name="lavoratoreAlleDipendenze9Novembre2020" minOccurs="1">
 														<xs:simpleType>
 															<xs:restriction base="xs:string">
 																<xs:enumeration value="S" />
