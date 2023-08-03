@@ -217,6 +217,7 @@
 															<xs:restriction base="xs:string">
 																<xs:enumeration value="S" />
 																<xs:enumeration value="N" />
+																<xs:enumeration value="Z" />
 															</xs:restriction>
 														</xs:simpleType>
 													</xs:element>
@@ -225,6 +226,7 @@
 															<xs:restriction base="xs:string">
 																<xs:enumeration value="S" />
 																<xs:enumeration value="N" />
+																<xs:enumeration value="Z" />
 															</xs:restriction>
 														</xs:simpleType>
 													</xs:element>
